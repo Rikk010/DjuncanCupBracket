@@ -324,7 +324,7 @@ async function introAnimation(){
 }
 
 
-//updateBracket()
+updateBracket()
 
 
 
