@@ -7,10 +7,6 @@ Bracket source > https://codepen.io/jbeason/pen/Wbaedb
 
 
 
-
-
-
-
 body {
 	font-family: 'Istok Web', sans-serif;
 	background-size: cover;
@@ -236,7 +232,6 @@ body {
 	color:white;
 	background-color: rgba(63, 63, 63, 0.624);
 	border-radius: 3px;
-	opacity: 0;
 }
 .champion li{
 	background-color: rgb(4, 55, 111);
