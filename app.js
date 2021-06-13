@@ -182,7 +182,7 @@ data = {
             },
             "game-2":{
                 "fteam": -1,
-                "steam": -2,
+                "steam": -1,
                 "result":-1,
                 "winner": -1
             }
@@ -228,6 +228,7 @@ teams = {
 
 
 function getTeamName(teamnum){
+    
     return teams[teamnum.toString()].name
 }
 
@@ -281,8 +282,31 @@ async function updateBracket(){
             console.log(data)
             updateWinners(data)
         })
+}
+
+async function tempupdate(){
+    var round_count = 0
+            for (var roundname in data.games){
+                round_count ++
+                if (!data.games.hasOwnProperty(roundname)){continue;}
+                let round = data.games[roundname]
+                game_count = 0
+            
+                for(var gamename in round){
+                    game = round[gamename]
+                    game_count++
+                    
+                    //Zet de data in elk vakje, vakjes hebben een id van : r{rondenummer}g{gamenummer}t{team 1 of 2}
+
+
+                    document.getElementById(`r${round_count.toString()}g${game_count.toString()}t1`).innerHTML = (game.fteam == -1 ? "" : getFormatted(game.fteam, round_count, game_count))
+                    document.getElementById(`r${round_count.toString()}g${game_count.toString()}t2`).innerHTML = (game.steam == -1 ? "" : getFormatted(game.steam, round_count, game_count))
+                }
+            }
+            console.log("updating winners with")
+            console.log(data)
+            updateWinners(data)
         
-    
 }
 
 function updateWinners(data){
@@ -324,7 +348,11 @@ async function introAnimation(){
 }
 
 
-updateBracket()
+setTimeout(() => {
+    
+tempupdate()
+}, 1800);
+
 
 
 
