@@ -182,7 +182,7 @@ data = {
             },
             "game-2":{
                 "fteam": -1,
-                "steam": -1,
+                "steam": -2,
                 "result":-1,
                 "winner": -1
             }
@@ -228,7 +228,6 @@ teams = {
 
 
 function getTeamName(teamnum){
-    
     return teams[teamnum.toString()].name
 }
 
@@ -255,72 +254,49 @@ function getFormatted(teamnum, roundnum, gamenum){
 
 
 
-//upd = window.setInterval(updateBracket, 2000)
+upd = window.setInterval(updateBracket, 2000)
 
 async function updateBracket(){
-        fetch("http://localhost:3000/data").then(data=>data.json()).then(data1=> data=data1 ).then(data => {
-            console.log(data)
-            var round_count = 0
-            for (var roundname in data.games){
-                round_count ++
-                if (!data.games.hasOwnProperty(roundname)){continue;}
-                let round = data.games[roundname]
-                game_count = 0
-            
-                for(var gamename in round){
-                    game = round[gamename]
-                    game_count++
-                    
-                    //Zet de data in elk vakje, vakjes hebben een id van : r{rondenummer}g{gamenummer}t{team 1 of 2}
-
-
-                    document.getElementById(`r${round_count.toString()}g${game_count.toString()}t1`).innerHTML = (game.fteam == -1 ? "" : getFormatted(game.fteam, round_count, game_count))
-                    document.getElementById(`r${round_count.toString()}g${game_count.toString()}t2`).innerHTML = (game.steam == -1 ? "" : getFormatted(game.steam, round_count, game_count))
-                }
-            }
-            console.log("updating winners with")
-            console.log(data)
-            updateWinners(data)
-        })
-}
-
-async function tempupdate(){
+    data = await fetch("https://litdrumrmees.site/data").then(data1=> data1.json())
+    if(data== null){
+        console.warn("Could not fetch data")
+        return;
+    }
     var round_count = 0
-            for (var roundname in data.games){
-                round_count ++
-                if (!data.games.hasOwnProperty(roundname)){continue;}
-                let round = data.games[roundname]
-                game_count = 0
+    for (var roundname in data.games){
+        round_count ++
+        if (!data.games.hasOwnProperty(roundname)){continue;}
+        let round = data.games[roundname]
+        game_count = 0
+    
+        for(var gamename in round){
+            game = round[gamename]
+            game_count++
             
-                for(var gamename in round){
-                    game = round[gamename]
-                    game_count++
-                    
-                    //Zet de data in elk vakje, vakjes hebben een id van : r{rondenummer}g{gamenummer}t{team 1 of 2}
+            //Zet de data in elk vakje, vakjes hebben een id van : r{rondenummer}g{gamenummer}t{team 1 of 2}
 
 
-                    document.getElementById(`r${round_count.toString()}g${game_count.toString()}t1`).innerHTML = (game.fteam == -1 ? "" : getFormatted(game.fteam, round_count, game_count))
-                    document.getElementById(`r${round_count.toString()}g${game_count.toString()}t2`).innerHTML = (game.steam == -1 ? "" : getFormatted(game.steam, round_count, game_count))
-                }
-            }
-            console.log("updating winners with")
-            console.log(data)
-            updateWinners(data)
+            document.getElementById(`r${round_count.toString()}g${game_count.toString()}t1`).innerHTML = (game.fteam == -1 ? "" : getFormatted(game.fteam, round_count, game_count))
+            document.getElementById(`r${round_count.toString()}g${game_count.toString()}t2`).innerHTML = (game.steam == -1 ? "" : getFormatted(game.steam, round_count, game_count))
+        }
+    }
+    console.log("updating winners with")
+    console.log(data)
+    updateWinners(data)
         
+        
+    
 }
 
 function updateWinners(data){
-    console.log(data)
     for (var gameindex in data.games["round-5"]){
         let game = data.games["round-5"][gameindex]
 
-        console.log(game.winner)
         if(game.winner > 0){
             let winnernum = game.winner
             let winner_in_game_index = data.games["round-5"][gameindex].fteam == game.winner ? 1: 2
 
 
-            console.log(`r5g${gameindex.slice(5)}t${winner_in_game_index}`)
             document.getElementById(`r5g${gameindex.slice(5)}t${winner_in_game_index}`).classList.add("winner-style")
         }
     }
@@ -337,22 +313,16 @@ async function introAnimation(){
         count++
         const index = Math.floor(Math.random() * all_items.length)
         const item = all_items[index];
-        console.log(item)
         all_items.splice(index, 1)
         setTimeout(() => {
             item.classList.add("fade-in-animation")
-            console.log("Now")
             
         }, count*30);
     }
 }
 
 
-setTimeout(() => {
-    
-tempupdate()
-}, 1800);
-
+updateBracket()
 
 
 
