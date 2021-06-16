@@ -201,8 +201,11 @@
         </section>
         
 </body>
-<script src="app.js">
-  
-
+<script src="app.js"></script>
+<script>
+url_string = window.location.href
+var url = new URL(url_string);
+var c = url.searchParams.get("zoom");
+document.body.style.zoom = `${c}%`;
 </script>
 </html>
