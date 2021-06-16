@@ -161,6 +161,7 @@ body {
 .fade-in-animation{
 	animation: fadestart 1s;
 	animation-fill-mode: forwards;
+	animation-delay: 2s;
 }
 @keyframes fadestart{
 	0%{
