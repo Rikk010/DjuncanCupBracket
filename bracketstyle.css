@@ -261,7 +261,7 @@ body {
 	color: #e59500;
 	text-transform: uppercase;
 	text-align: center;
-	height: 40px;
+	height: 15px;
 	animation: titles-in 4s;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
