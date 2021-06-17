@@ -8,185 +8,181 @@ Staat in txt bestand omdat google geen .js toelaat
 let introdone = false
 
 data = {
-    "games": {
-        "round-1": {
-            "game-1": {
+    "games":{
+        "round-1":{
+            "game-1":{
                 "fteam": 1,
                 "steam": 2,
-                "result": {
-                    "1": 2,
-                    "2": 3
-                }
+                "result": -1
             },
-            "game-2": {
+            "game-2":{
                 "fteam": 3,
                 "steam": 4,
-                "result": {
-                    "3": 2,
-                    "4": 0
-                }
+                "result": -1
             },
-            "game-3": {
+            "game-3":{
                 "fteam": 5,
                 "steam": 6,
                 "result": -1
             },
-            "game-4": {
+            "game-4":{
                 "fteam": 7,
                 "steam": 8,
                 "result": -1
             },
-            "game-5": {
+            "game-5":{
                 "fteam": 9,
                 "steam": 10,
                 "result": -1
             },
-            "game-6": {
+            "game-6":{
                 "fteam": 11,
                 "steam": 12,
                 "result": -1
             },
-            "game-7": {
+            "game-7":{
                 "fteam": 13,
                 "steam": 14,
                 "result": -1
             },
-            "game-8": {
+            "game-8":{
                 "fteam": 15,
                 "steam": 16,
                 "result": -1
             },
-            "game-9": {
+            "game-9":{
                 "fteam": 17,
                 "steam": 18,
                 "result": -1
             },
-            "game-10": {
+            "game-10":{
                 "fteam": 19,
                 "steam": 20,
                 "result": -1
             },
-            "game-11": {
+            "game-11":{
                 "fteam": 21,
                 "steam": 22,
                 "result": -1
             },
-            "game-12": {
+            "game-12":{
                 "fteam": 23,
                 "steam": 24,
                 "result": -1
             },
-            "game-13": {
+            "game-13":{
                 "fteam": 25,
                 "steam": 26,
                 "result": -1
             },
-            "game-14": {
+            "game-14":{
                 "fteam": 27,
                 "steam": 28,
                 "result": -1
             },
-            "game-15": {
+            "game-15":{
                 "fteam": 29,
                 "steam": 30,
                 "result": -1
             },
-            "game-16": {
+            "game-16":{
                 "fteam": 31,
                 "steam": 32,
                 "result": -1
             }
+
         },
-        "round-2": {
-            "game-1": {
-                "fteam": 2,
-                "steam": 3,
+        "round-2":{
+            "game-1":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-2": {
-                "fteam": -1,
-                "steam": -1,
+            "game-2":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-3": {
-                "fteam": -1,
-                "steam": -1,
+            "game-3":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-4": {
-                "fteam": -1,
-                "steam": -1,
+            "game-4":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-5": {
-                "fteam": -1,
-                "steam": -1,
+            "game-5":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-6": {
-                "fteam": -1,
-                "steam": -1,
+            "game-6":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-7": {
-                "fteam": -1,
-                "steam": -1,
+            "game-7":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-8": {
-                "fteam": -1,
-                "steam": -1,
+            "game-8":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             }
         },
-        "round-3": {
-            "game-1": {
-                "fteam": -1,
-                "steam": -1,
+        "round-3":{
+            "game-1":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-2": {
-                "fteam": -1,
-                "steam": -1,
+            "game-2":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-3": {
-                "fteam": -1,
-                "steam": -1,
+            "game-3":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-4": {
-                "fteam": -1,
-                "steam": -1,
+            "game-4":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             }
         },
-        "round-4": {
-            "game-1": {
-                "fteam": -1,
-                "steam": -1,
+        "round-4":{
+            "game-1":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             },
-            "game-2": {
-                "fteam": -1,
-                "steam": -1,
+            "game-2":{
+                "fteam":-1,
+                "steam":-1,
                 "result": -1
             }
         },
-        "round-5": {
-            "game-1": {
-                "fteam": -1,
+        "round-5":{
+            "game-1":{
+                "fteam":-1,
                 "steam": -1,
                 "result":-1,
                 "winner": -1
             },
             "game-2":{
-                "fteam": -1,
-                "steam": -2,
+                "fteam":-1,
+                "steam":-1,
                 "result":-1,
                 "winner": -1
             }
         }
+        
     }
 }
 teams = {
