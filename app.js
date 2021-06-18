@@ -203,7 +203,7 @@ teams = {
     "15":{"name":"Wasbeer Inc"},
     "16":{"name":"IceWolves Esport"},
     "17":{"name":"Ik wil fietsen!"},
-    "18":{"name":"Team TOTO"},
+    "18":{"name":"Owls"},
     "19":{"name":"European Peeps"},
     "20":{"name":"Happeteee"},
     "21":{"name":"Pog"},
@@ -218,6 +218,7 @@ teams = {
     "30":{"name":"AYS"},
     "31":{"name":"Ventjes"},
     "32":{"name":"Rexcellent"}
+     
 }
 
 
