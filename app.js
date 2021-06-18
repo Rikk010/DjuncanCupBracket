@@ -259,6 +259,7 @@ async function updateBracket(){
         console.warn("Could not fetch data")
         return;
     }
+    
     var round_count = 0
     for (var roundname in data.games){
         round_count ++
@@ -318,6 +319,7 @@ async function introAnimation(){
     }
 }
 
+fetch("https://litdrumrmees.site/getteams").then(data=> data.json()).then(data=> {teams = data})
 
 updateBracket()
 
