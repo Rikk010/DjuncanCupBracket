@@ -233,7 +233,7 @@ function getScore(teamnum, roundnum, gamenum){
     let score = data.games["round-" + roundnum]["game-" + gamenum].result[teamnum.toString()]
     //Als de score undefined is dat geef ik een empty string terug zodat de score leeg blijft
     
-    if (score == null){
+    if (score == null && score != 0){
         return ""
     }
 
