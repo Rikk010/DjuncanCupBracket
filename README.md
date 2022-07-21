@@ -16,7 +16,7 @@ Organizer of the tournament: [Djuncan](ttps://www.youtube.com/user/BananaFlavour
 
 Game: [Rocket League](https://www.rocketleague.com/) 
 ## Live Demo
-See the project in action on Youtube [HERE](https://youtu.be/RwOKFrCBebc?t=885")
+See the project in action on Youtube [HERE](https://youtu.be/RwOKFrCBebc?t=885)
 (Timestamp: 14:45)
 
 You can check out the animation [here](https://rikk010.github.io/DjuncanCupBracket), the data probably does not load because the server is not running.
